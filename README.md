@@ -1,16 +1,25 @@
-# LNPP with Docker
+<!-- markdownlint-disable MD033 MD041 -->
 
-A Docker Compose setup for the environment of LNPP.  
+<p align="center">
+  <span>
+    <img src="https://raw.githubusercontent.com/saltchang/lnpp/main/static/images/LNPP_LOGO.png" height="200">
+    <h1 align="center">LNPP</h1>
+  </span>
+</p>
+
+This is for you all **LNPPers**.  
+A Docker Compose setup for the environment of LNPP.
 
 - **L**inux
 - **N**ginx
 - **P**ostgreSQL
 - **P**HP
 
-## Pre-requisites
+## Requirements
 
 - Docker
 - Docker Compose
+- Laravel (Optional)
 
 ## Quick Start
 
