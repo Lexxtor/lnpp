@@ -13,7 +13,9 @@ RUN set -ex \
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql
 
-# Install git
-RUN apt-get update \
-    && apt-get -y install git libpq-dev \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+# Install packages
+RUN apk add git  bash nano apk-cron
+
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php \
+    && mv composer.phar /usr/local/bin/composer
