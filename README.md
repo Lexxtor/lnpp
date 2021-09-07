@@ -7,7 +7,7 @@
   </span>
 </p>
 
-This is for you all **LNPPers**.  
+This is for all **LNPPers**.  
 A Docker Compose setup for the environment of LNPP.
 
 - **L**inux
@@ -19,7 +19,6 @@ A Docker Compose setup for the environment of LNPP.
 
 - Docker
 - Docker Compose
-- Laravel (Optional)
 
 ## Quick Start
 
