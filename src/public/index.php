@@ -1,3 +1,3 @@
 <?php
 
-echo "Hello, LNPP";
+echo "LNPP is here! PHP date('c'): " , date('c');
