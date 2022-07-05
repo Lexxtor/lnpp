@@ -2,7 +2,6 @@
 
 <p align="center">
   <span>
-    <img src="https://raw.githubusercontent.com/saltchang/lnpp/main/static/images/LNPP_LOGO.png" height="200">
     <h1 align="center">LNPP</h1>
   </span>
 </p>
