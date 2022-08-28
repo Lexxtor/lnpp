@@ -8,14 +8,27 @@ services:
     image: library/postgres:alpine
     container_name: ${APP_NAME}_postgres
     volumes:
-      - ./docker/postgres:${PGDATA_PATH}
+      - ./docker/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
-      - PGDATA=${PGDATA_PATH}/pgdata
+      - POSTGRES_DB=${POSTGRES_DATABASE}
+      - PGDATA=/var/lib/postgresql/data/pgdata
     ports:
-      - 5432:5432
+      - 5432:5432 # если надо подключяться снаружи (не из докера)
+
+  mysql:
+    image: mysql:5.7.39-debian
+    container_name: ${APP_NAME}_mysql
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    ports:
+      - 3306:3306 # если надо подключяться снаружи (не из докера)
 
   nginx:
     image: library/nginx:alpine
