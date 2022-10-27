@@ -13,7 +13,6 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=${POSTGRES_DATABASE}
-      - PGDATA=/var/lib/postgresql/data/pgdata
     ports:
       - 5432:5432 # если надо подключяться снаружи (не из докера)
 
@@ -41,7 +40,6 @@ services:
       - './src:/var/www/html'
 
   php:
-    image: ${APP_NAME}-php
     build: ./docker/php
     container_name: ${APP_NAME}_php
     ports:
