@@ -5,7 +5,8 @@ COPY php.ini $PHP_INI_DIR/conf.d/
 # Install PHP extensions
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
-RUN install-php-extensions redis pgsql #xdebug отключил, он почему-то не работает
+#xdebug в install-php-extensions отключил, он почему-то не работает
+RUN install-php-extensions redis pgsql 
 
 RUN set -ex \
     && apk --no-cache add \
